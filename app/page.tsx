@@ -12,10 +12,34 @@ import { TransformationSlider } from "@/components/transformation-slider"
 import { ContactForm } from "@/components/contact-form"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { AudioPlayer } from "@/components/audio-player"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function HammerFitLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  // Close mobile menu when clicking outside or on scroll
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (mobileMenuOpen && !target.closest("header")) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    const handleScroll = () => {
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside)
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside)
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [mobileMenuOpen])
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
@@ -55,7 +79,15 @@ export default function HammerFitLanding() {
           </Link>
         </nav>
         <div className="md:hidden ml-auto">
-          <Button variant="ghost" size="sm" className="text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-white relative z-50"
+            onClick={(e) => {
+              e.stopPropagation()
+              setMobileMenuOpen(!mobileMenuOpen)
+            }}
+          >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -65,46 +97,46 @@ export default function HammerFitLanding() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-sm border-b border-gray-800">
+        <div className="md:hidden bg-black/95 backdrop-blur-sm border-b border-gray-800 fixed top-16 left-0 right-0 z-40 shadow-lg">
           <nav className="flex flex-col gap-4 p-4">
             <Link
               href="#about"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="#programs"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Programs
             </Link>
             <Link
               href="#transformation"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Transformation
             </Link>
             <Link
               href="#hammer-fit"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Membership
             </Link>
             <Link
               href="/subscribe"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Subscribe
             </Link>
             <Link
               href="#contact"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
@@ -481,46 +513,37 @@ export default function HammerFitLanding() {
               description="Celebrating progress, dedication, and results"
               images={[
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%208-oFCSzq7bOsqsFvtOKKR8Kgn2JdFoJz.jpeg",
-                  alt: "Hammer with fitness clients celebrating their achievements",
+                  src: "/images/hammer-gym-1.jpeg",
+                  alt: "Hammer showcasing his incredible physique in gray shorts next to gym equipment, displaying visible abs and muscle definition",
                   aspectRatio: "video",
                 },
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%209-anygbMvfS5EUOhvxU3BZxMp9m66t8V.jpeg",
-                  alt: "Hammer with fitness colleagues sharing nutrition tips and giving thumbs up",
+                  src: "/images/hammer-gym-2.jpeg",
+                  alt: "Hammer giving a thumbs up while seated on gym equipment, showing his muscular build and positive attitude",
                   aspectRatio: "video",
                 },
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%207-uGirQX02FJmYTVgvH0yZg96BeIs796.jpeg",
-                  alt: "Hammer with a female client who completed her fitness program",
+                  src: "/images/hammer-gym-3.jpeg",
+                  alt: "Hammer in beige pants and sunglasses giving a thumbs up next to tanning equipment with blue LED lighting",
                   aspectRatio: "video",
                 },
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%206-ffB0N9G3cByWA5z3PBzvfXkOHGtPpx.jpeg",
-                  alt: "Hammer at a fitness event with colorful balloons, giving thumbs up",
+                  src: "/images/hammer-gym-4.jpeg",
+                  alt: "Hammer in bright green shorts giving a thumbs up next to gym equipment, showing his impressive transformation results",
                   aspectRatio: "video",
                 },
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%205-yYeP9Ql8BvNGgmyhAZ5dQknURq77WM.jpeg",
-                  alt: "Hammer with a client in the fitness studio, giving thumbs up",
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20boat%20transformation-m1DpqyF3XKxdZqMf7HHvlnxd0jgv6t.jpeg",
+                  alt: "Hammer showcasing his peak physique on a boat in red shorts and sunglasses",
                   aspectRatio: "video",
                 },
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20dealership-GGWbxPNvUtiSKJ6FkPaxlAqp0Ngj7M.jpeg",
-                  alt: "Hammer outside the fitness center in his professional attire giving a thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/automotive-new-1.png",
-                  alt: "Hammer with a satisfied female client after completing her fitness program, both giving thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/automotive-new-10.png",
-                  alt: "Hammer at his personalized desk with Thor's hammer, plants, and fitness memorabilia",
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%206-lU6I0sMWslswaGujdnMH6rBdP6iEzF.jpeg",
+                  alt: "Hammer's final transformation result showing incredible muscle definition and visible abs",
                   aspectRatio: "video",
                 },
               ]}
+              className="max-w-6xl mx-auto"
             />
           </div>
         </section>
