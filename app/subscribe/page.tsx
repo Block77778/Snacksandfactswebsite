@@ -14,6 +14,7 @@ import Image from "next/image"
 
 export default function SubscribePage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null
     message: string
@@ -95,13 +96,56 @@ export default function SubscribePage() {
           </Link>
         </nav>
         <div className="md:hidden ml-auto">
-          <Button variant="ghost" size="sm" className="text-white">
+          <Button variant="ghost" size="sm" className="text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </Button>
         </div>
       </header>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-black/95 backdrop-blur-sm border-b border-gray-800 fixed top-16 left-0 right-0 z-40">
+          <nav className="flex flex-col gap-4 p-4">
+            <Link
+              href="/#about"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/#programs"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Programs
+            </Link>
+            <Link
+              href="/#transformation"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Transformation
+            </Link>
+            <Link
+              href="/#hammer-fit"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Membership
+            </Link>
+            <Link
+              href="/#contact"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      )}
 
       <main className="flex-1 py-12 md:py-24 bg-black">
         <div className="container px-4 md:px-6 mx-auto max-w-5xl">
