@@ -30,7 +30,7 @@ export function PhotoGallery({ title, description, images, className = "" }: Pho
       case "square":
         return "aspect-square"
       case "video":
-        return "aspect-video"
+        return "aspect-[16/12]"
       case "portrait":
         return "aspect-[3/4]"
       default:
@@ -45,7 +45,7 @@ export function PhotoGallery({ title, description, images, className = "" }: Pho
         {description && <p className="text-gray-600 max-w-2xl mx-auto">{description}</p>}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {images.map((image, index) => (
           <Card
             key={index}
@@ -53,13 +53,13 @@ export function PhotoGallery({ title, description, images, className = "" }: Pho
             onClick={() => openModal(index)}
           >
             <div className="relative w-full h-full">
-              <div className={`relative w-full ${getAspectRatioClass(image.aspectRatio)}`}>
+              <div className={`relative w-full ${getAspectRatioClass(image.aspectRatio)} h-[300px]`}>
                 <Image
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
