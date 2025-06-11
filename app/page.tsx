@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,8 +12,11 @@ import { TransformationSlider } from "@/components/transformation-slider"
 import { ContactForm } from "@/components/contact-form"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { AudioPlayer } from "@/components/audio-player"
+import { useState } from "react"
 
 export default function HammerFitLanding() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="flex flex-col min-h-screen bg-black">
       {/* Audio Player */}
@@ -50,13 +55,63 @@ export default function HammerFitLanding() {
           </Link>
         </nav>
         <div className="md:hidden ml-auto">
-          <Button variant="ghost" size="sm" className="text-white">
+          <Button variant="ghost" size="sm" className="text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </Button>
         </div>
       </header>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-black/95 backdrop-blur-sm border-b border-gray-800">
+          <nav className="flex flex-col gap-4 p-4">
+            <Link
+              href="#about"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="#programs"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Programs
+            </Link>
+            <Link
+              href="#transformation"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Transformation
+            </Link>
+            <Link
+              href="#hammer-fit"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Membership
+            </Link>
+            <Link
+              href="/subscribe"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Subscribe
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      )}
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -121,11 +176,6 @@ export default function HammerFitLanding() {
                         <Dumbbell className="h-4 w-4" />
                       </div>
                       <span className="ml-2">Explore Programs</span>
-                    </Button>
-                  </Link>
-                  <Link href="#contact">
-                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                      Contact Me
                     </Button>
                   </Link>
                 </div>
