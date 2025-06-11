@@ -1,30 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Mail,
-  Phone,
-  Instagram,
-  Twitter,
-  Facebook,
-  Hammer,
-  Car,
-  Zap,
-  Lightbulb,
-  Wrench,
-  Settings,
-  Gauge,
-} from "lucide-react"
+import { Mail, Phone, Instagram, Twitter, Facebook, Hammer, Zap, Lightbulb } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { PhotoGallery } from "@/components/photo-gallery"
-import { Dumbbell, Star, Award, Users, Heart } from "lucide-react"
+import { Dumbbell, Heart } from "lucide-react"
 import { TransformationSlider } from "@/components/transformation-slider"
 import { ContactForm } from "@/components/contact-form"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { AudioPlayer } from "@/components/audio-player"
 
-export default function SnacksAndFactsLanding() {
+export default function HammerFitLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-black">
       {/* Audio Player */}
@@ -37,23 +24,23 @@ export default function SnacksAndFactsLanding() {
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Snacks%20and%20facts%20logo-TNPSF5djY9qkumP2uzk8YFhG1aMa0G.png"
             width="40"
             height="40"
-            alt="Snacks & Facts Logo - Muscular arms holding hammer"
+            alt="Hammer Fit Logo - Muscular arms holding hammer"
             className="rounded-lg"
           />
-          <span className="text-2xl font-bold text-white">Snacks & Facts</span>
+          <span className="text-2xl font-bold text-white">Hammer Fit</span>
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link href="#about" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             About
           </Link>
-          <Link href="#automotive" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Automotive
+          <Link href="#programs" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Programs
           </Link>
-          <Link href="#healthy-living" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Healthy Living
+          <Link href="#transformation" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Transformation
           </Link>
           <Link href="#hammer-fit" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Hammer Fit
+            Membership
           </Link>
           <Link href="/subscribe" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             Subscribe
@@ -84,28 +71,17 @@ export default function SnacksAndFactsLanding() {
               <Hammer className="h-40 w-40" />
             </div>
 
-            {/* Cars */}
+            {/* Fitness Elements */}
             <div className="absolute top-40 right-20 text-white/5">
-              <Car className="h-24 w-24" />
+              <Dumbbell className="h-24 w-24" />
             </div>
             <div className="absolute bottom-40 right-10 text-white/5">
-              <Car className="h-28 w-28" />
+              <Dumbbell className="h-28 w-28" />
             </div>
 
-            {/* Automotive Elements */}
-            <div className="absolute top-60 left-1/3 text-white/5">
-              <Settings className="h-20 w-20" />
-            </div>
-            <div className="absolute bottom-60 right-1/3 text-white/5">
-              <Wrench className="h-24 w-24" />
-            </div>
-
-            {/* Muscle/Power Elements */}
+            {/* Power Elements */}
             <div className="absolute top-32 right-1/4 text-white/5">
               <Zap className="h-36 w-36" />
-            </div>
-            <div className="absolute bottom-32 left-1/2 text-white/5">
-              <Gauge className="h-30 w-30" />
             </div>
           </div>
 
@@ -116,35 +92,42 @@ export default function SnacksAndFactsLanding() {
                   <Badge className="bg-white/10 text-white border-white/20 hover:bg-white/20 w-fit backdrop-blur-sm">
                     <div className="flex items-center gap-2">
                       <Hammer className="h-4 w-4" />
-                      <Car className="h-4 w-4" />
+                      <Dumbbell className="h-4 w-4" />
                       <Zap className="h-4 w-4" />
                     </div>
-                    <span className="ml-2">Power & Automotive</span>
+                    <span className="ml-2">Fitness & Transformation</span>
                   </Badge>
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                      Tasty Truths
+                      Transform Your Body
                     </span>{" "}
                     and
                     <br />
-                    Satisfying Facts
+                    <span className="text-3xl sm:text-4xl xl:text-5xl">Unleash Your Potential</span>
                   </h1>
                   <p className="max-w-[600px] text-gray-300 md:text-xl leading-relaxed">
-                    Welcome to my world where automotive expertise meets powerful content. Join me for authentic
-                    conversations, interesting facts, and the occasional snack review from the dealership floor.
+                    Welcome to Hammer Fit, where real transformation happens. Join me for personalized workout routines,
+                    meal plans, and the motivation you need to achieve your fitness goals.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                  <Button
-                    size="lg"
-                    className="bg-white text-black hover:bg-gray-100 shadow-lg shadow-white/10 font-semibold group"
-                  >
-                    <div className="flex items-center gap-2">
-                      <Hammer className="h-4 w-4" />
-                      <Car className="h-4 w-4" />
-                    </div>
-                    <span className="ml-2">Explore Content</span>
-                  </Button>
+                  <Link href="#programs">
+                    <Button
+                      size="lg"
+                      className="bg-white text-black hover:bg-gray-100 shadow-lg shadow-white/10 font-semibold group"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Hammer className="h-4 w-4" />
+                        <Dumbbell className="h-4 w-4" />
+                      </div>
+                      <span className="ml-2">Explore Programs</span>
+                    </Button>
+                  </Link>
+                  <Link href="#contact">
+                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                      Contact Me
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative order-1 lg:order-2">
@@ -153,14 +136,14 @@ export default function SnacksAndFactsLanding() {
                   src="/images/hammer-dealership.png"
                   width="600"
                   height="600"
-                  alt="Hammer smiling and giving a thumbs up outside his Nissan dealership, wearing a white shirt with the dealership logo"
+                  alt="Hammer smiling and giving a thumbs up, wearing a white shirt"
                   className="aspect-square overflow-hidden rounded-3xl object-cover shadow-2xl shadow-white/5 border border-white/10 mx-auto"
                   priority={true}
                 />
                 <div className="absolute -bottom-4 -left-4 bg-black/80 backdrop-blur-sm border border-white/20 p-4 rounded-2xl shadow-lg">
                   <div className="flex items-center gap-2">
-                    <Car className="h-6 w-6 text-white" />
-                    <span className="font-semibold text-white">Auto Expert</span>
+                    <Dumbbell className="h-6 w-6 text-white" />
+                    <span className="font-semibold text-white">Fitness Expert</span>
                   </div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-black/80 backdrop-blur-sm border border-white/20 p-4 rounded-2xl shadow-lg">
@@ -174,7 +157,7 @@ export default function SnacksAndFactsLanding() {
                   <Hammer className="h-16 w-16 text-white/20" />
                 </div>
                 <div className="absolute top-1/4 right-1/4 pointer-events-none">
-                  <Car className="h-12 w-12 text-white/15" />
+                  <Dumbbell className="h-12 w-12 text-white/15" />
                 </div>
               </div>
             </div>
@@ -189,7 +172,7 @@ export default function SnacksAndFactsLanding() {
               <Hammer className="h-20 w-20" />
             </div>
             <div className="absolute bottom-10 left-10 text-gray-100">
-              <Car className="h-16 w-16" />
+              <Dumbbell className="h-16 w-16" />
             </div>
             <div className="absolute top-1/2 right-1/4 text-gray-100">
               <Zap className="h-18 w-18" />
@@ -201,13 +184,13 @@ export default function SnacksAndFactsLanding() {
               <div className="space-y-2">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Hammer className="h-8 w-8 text-black" />
-                  <Car className="h-8 w-8 text-black" />
+                  <Dumbbell className="h-8 w-8 text-black" />
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-black">Meet Hammer</h2>
                   <Zap className="h-8 w-8 text-black" />
                 </div>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  From the automotive showroom to powerful content creation - bringing you authentic perspectives,
-                  interesting facts, and genuine conversations about life, cars, and everything in between.
+                  From personal transformation to professional fitness coaching - bringing you authentic perspectives,
+                  proven workout routines, and genuine guidance about health, fitness, and personal growth.
                 </p>
               </div>
             </div>
@@ -217,7 +200,7 @@ export default function SnacksAndFactsLanding() {
                   src="/images/automotive-new-10.png"
                   width="600"
                   height="400"
-                  alt="Hammer at his personalized dealership office with tropical artwork, plants, snacks, and relaxed atmosphere"
+                  alt="Hammer in his personalized fitness space with motivational artwork and fitness equipment"
                   className="aspect-video overflow-hidden rounded-xl object-cover shadow-2xl border border-gray-200 mx-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent rounded-xl"></div>
@@ -225,31 +208,31 @@ export default function SnacksAndFactsLanding() {
               <div className="flex flex-col justify-center space-y-4">
                 <h3 className="text-2xl font-bold text-black flex items-center gap-2">
                   <Hammer className="h-6 w-6" />
-                  <Car className="h-6 w-6" />
+                  <Dumbbell className="h-6 w-6" />
                   My Story
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Working in the automotive industry has given me unique insights into people, business, and life.
-                  Snacks & Facts started as a way to share those observations, interesting discoveries, and authentic
-                  moments from both my professional and personal journey.
+                  My fitness journey has given me unique insights into transformation, discipline, and achieving goals.
+                  Hammer Fit started as a way to share those experiences, proven methods, and authentic moments from
+                  both my personal and professional journey.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Whether I'm helping customers find their perfect vehicle or sharing a fascinating fact I just learned,
-                  it's all about genuine connections, power, and making everyday moments more interesting.
+                  Whether I'm helping clients achieve their fitness goals or sharing a fascinating insight I've learned,
+                  it's all about genuine connections, power, and making everyday progress toward your best self.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Content Section */}
-        <section id="content" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 relative">
+        {/* Programs Section */}
+        <section id="programs" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 relative">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-black">What I Share</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-black">Fitness Programs</h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Authentic content from the intersection of automotive expertise, power, and everyday experiences
+                  Personalized fitness solutions to help you achieve your goals
                 </p>
               </div>
             </div>
@@ -257,15 +240,18 @@ export default function SnacksAndFactsLanding() {
               <Card className="bg-white border-gray-200 hover:shadow-2xl hover:shadow-black/10 transition-all duration-500 hover:border-black/20 group">
                 <CardContent className="p-8 text-center space-y-4">
                   <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 relative">
-                    <Car className="h-8 w-8 text-white" />
+                    <Dumbbell className="h-8 w-8 text-white" />
                     <div className="absolute -top-2 -right-2">
                       <Hammer className="h-4 w-4 text-black" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-black">Automotive Insights</h3>
+                  <h3 className="text-xl font-bold text-black">Strength Training</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Real talk about cars, dealership life, and industry insights from someone who lives it every day.
+                    Build muscle, increase strength, and transform your physique with personalized strength routines.
                   </p>
+                  <Link href="/subscribe">
+                    <Button className="w-full bg-black text-white hover:bg-gray-800">Learn More</Button>
+                  </Link>
                 </CardContent>
               </Card>
               <Card className="bg-white border-gray-200 hover:shadow-2xl hover:shadow-black/10 transition-all duration-500 hover:border-black/20 group">
@@ -276,10 +262,13 @@ export default function SnacksAndFactsLanding() {
                       <Hammer className="h-4 w-4 text-black" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-black">Fascinating Facts</h3>
+                  <h3 className="text-xl font-bold text-black">Nutrition Planning</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Interesting discoveries and satisfying facts that make great conversation starters.
+                    Customized meal plans and nutrition guidance to fuel your workouts and maximize results.
                   </p>
+                  <Link href="/subscribe">
+                    <Button className="w-full bg-black text-white hover:bg-gray-800">Learn More</Button>
+                  </Link>
                 </CardContent>
               </Card>
               <Card className="bg-white border-gray-200 hover:shadow-2xl hover:shadow-black/10 transition-all duration-500 hover:border-black/20 group">
@@ -290,151 +279,28 @@ export default function SnacksAndFactsLanding() {
                       <Hammer className="h-4 w-4 text-black" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-black">Power Content</h3>
+                  <h3 className="text-xl font-bold text-black">Personal Coaching</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Authentic moments, powerful insights, and genuine perspectives on strength and determination.
+                    One-on-one guidance, accountability, and motivation to help you reach your fitness goals.
                   </p>
+                  <Link href="/subscribe">
+                    <Button className="w-full bg-black text-white hover:bg-gray-800">Learn More</Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Automotive Expertise Section */}
-        <section id="automotive" className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <Car className="h-8 w-8 text-black" />
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl text-black">
-                    Automotive Expertise
-                  </h2>
-                  <Car className="h-8 w-8 text-black" />
-                </div>
-                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  With years of experience in the automotive industry, I bring passion and knowledge to every customer
-                  interaction
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-              <Card className="bg-white border-gray-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-black rounded-full p-2">
-                      <Star className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold">Customer Excellence</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    Dedicated to providing an exceptional car buying experience with personalized service and attention
-                    to detail.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <Badge className="bg-black text-white">5-Star Reviews</Badge>
-                    <Badge className="bg-black text-white">Customer Satisfaction</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-gray-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-black rounded-full p-2">
-                      <Award className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold">Industry Recognition</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    Award-winning sales professional with consistent top performance and recognition within the
-                    dealership network.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <Badge className="bg-black text-white">Top Performer</Badge>
-                    <Badge className="bg-black text-white">Sales Excellence</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-gray-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-black rounded-full p-2">
-                      <Users className="h-5 w-5 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold">Community Connection</h3>
-                  </div>
-                  <p className="text-gray-600">
-                    Building relationships beyond sales, creating a community of satisfied customers who become friends.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <Badge className="bg-black text-white">Relationship Building</Badge>
-                    <Badge className="bg-black text-white">Community Focus</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <PhotoGallery
-              title="Automotive Gallery"
-              description="Moments captured with amazing customers and at the dealership"
-              images={[
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%208-oFCSzq7bOsqsFvtOKKR8Kgn2JdFoJz.jpeg",
-                  alt: "Hammer with young customers at the dealership lot, all smiling and celebrating",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%209-anygbMvfS5EUOhvxU3BZxMp9m66t8V.jpeg",
-                  alt: "Hammer with colleagues at the dealership sharing snacks and giving thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%207-uGirQX02FJmYTVgvH0yZg96BeIs796.jpeg",
-                  alt: "Hammer with a female customer who just purchased a Nissan, standing by their vehicle",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%206-ffB0N9G3cByWA5z3PBzvfXkOHGtPpx.jpeg",
-                  alt: "Hammer with colorful Easter balloons at the dealership, giving thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%205-yYeP9Ql8BvNGgmyhAZ5dQknURq77WM.jpeg",
-                  alt: "Hammer with a customer in the Nissan personalization studio, giving thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20dealership-GGWbxPNvUtiSKJ6FkPaxlAqp0Ngj7M.jpeg",
-                  alt: "Hammer outside the Nissan dealership in his professional attire giving a thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/automotive-new-1.png",
-                  alt: "Hammer with a satisfied female customer at the dealership, both giving thumbs up",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/automotive-new-10.png",
-                  alt: "Hammer at his personalized desk with Thor's hammer, tropical plants, and automotive memorabilia",
-                  aspectRatio: "video",
-                },
-              ]}
-            />
-          </div>
-        </section>
-
-        {/* Healthy Living Section */}
-        <section id="healthy-living" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        {/* Transformation Section */}
+        <section id="transformation" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Dumbbell className="h-8 w-8 text-black" />
                   <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl text-black">
-                    Healthy Living
+                    Transformation Journey
                   </h2>
                   <Dumbbell className="h-8 w-8 text-black" />
                 </div>
@@ -542,6 +408,73 @@ export default function SnacksAndFactsLanding() {
           </div>
         </section>
 
+        {/* Fitness Gallery */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="space-y-2">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Dumbbell className="h-8 w-8 text-black" />
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl text-black">
+                    Fitness Gallery
+                  </h2>
+                  <Dumbbell className="h-8 w-8 text-black" />
+                </div>
+                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Moments captured during workouts, transformations, and fitness achievements
+                </p>
+              </div>
+            </div>
+
+            <PhotoGallery
+              title="Fitness Moments"
+              description="Celebrating progress, dedication, and results"
+              images={[
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%208-oFCSzq7bOsqsFvtOKKR8Kgn2JdFoJz.jpeg",
+                  alt: "Hammer with fitness clients celebrating their achievements",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%209-anygbMvfS5EUOhvxU3BZxMp9m66t8V.jpeg",
+                  alt: "Hammer with fitness colleagues sharing nutrition tips and giving thumbs up",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%207-uGirQX02FJmYTVgvH0yZg96BeIs796.jpeg",
+                  alt: "Hammer with a female client who completed her fitness program",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%206-ffB0N9G3cByWA5z3PBzvfXkOHGtPpx.jpeg",
+                  alt: "Hammer at a fitness event with colorful balloons, giving thumbs up",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Automative%20new%205-yYeP9Ql8BvNGgmyhAZ5dQknURq77WM.jpeg",
+                  alt: "Hammer with a client in the fitness studio, giving thumbs up",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20dealership-GGWbxPNvUtiSKJ6FkPaxlAqp0Ngj7M.jpeg",
+                  alt: "Hammer outside the fitness center in his professional attire giving a thumbs up",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "/images/automotive-new-1.png",
+                  alt: "Hammer with a satisfied female client after completing her fitness program, both giving thumbs up",
+                  aspectRatio: "video",
+                },
+                {
+                  src: "/images/automotive-new-10.png",
+                  alt: "Hammer at his personalized desk with Thor's hammer, plants, and fitness memorabilia",
+                  aspectRatio: "video",
+                },
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hammer Fit Program Section */}
         <section id="hammer-fit" className="w-full py-12 md:py-24 lg:py-32 bg-black relative overflow-hidden">
           {/* Static Background */}
@@ -597,6 +530,11 @@ export default function SnacksAndFactsLanding() {
                       <p>• Workout Routine</p>
                       <p>• New workout routines and meal plans monthly</p>
                     </div>
+                    <div className="mt-4">
+                      <Link href="/subscribe">
+                        <Button className="w-full bg-white text-black hover:bg-gray-100">Subscribe Now</Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -618,6 +556,11 @@ export default function SnacksAndFactsLanding() {
                       <p>• Quarterly progress and goal setting</p>
                       <p>• Exclusive access to merchandise and discounts</p>
                     </div>
+                    <div className="mt-4">
+                      <Link href="/subscribe">
+                        <Button className="w-full bg-white text-black hover:bg-gray-100">Subscribe Now</Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -638,6 +581,11 @@ export default function SnacksAndFactsLanding() {
                       <p>• Personal Coaching - Once per week via virtual call</p>
                       <p>• An autographed T-Shirt from The Hammer</p>
                       <p>• A spot on the website for Hammer Jr. Of the month IF MONTHLY GOALS ARE REACHED!</p>
+                    </div>
+                    <div className="mt-4">
+                      <Link href="/subscribe">
+                        <Button className="w-full bg-white text-black hover:bg-gray-100">Subscribe Now</Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
@@ -725,12 +673,13 @@ export default function SnacksAndFactsLanding() {
               <div className="space-y-2">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Hammer className="h-8 w-8 text-black" />
-                  <Car className="h-8 w-8 text-black" />
+                  <Dumbbell className="h-8 w-8 text-black" />
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-black">Get In Touch</h2>
                   <Zap className="h-8 w-8 text-black" />
                 </div>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Want to collaborate, share an interesting fact, or just say hello? I'd love to hear from you!
+                  Want to start your fitness journey, ask questions about the program, or just say hello? I'd love to
+                  hear from you!
                 </p>
               </div>
             </div>
@@ -745,7 +694,7 @@ export default function SnacksAndFactsLanding() {
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                       <Hammer className="h-6 w-6 text-white" />
-                      <Car className="h-6 w-6 text-white" />
+                      <Dumbbell className="h-6 w-6 text-white" />
                       Contact Information
                     </h3>
                     <div className="space-y-6">
@@ -769,11 +718,11 @@ export default function SnacksAndFactsLanding() {
                       </div>
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                          <Car className="h-6 w-6 text-black" />
+                          <Dumbbell className="h-6 w-6 text-black" />
                         </div>
                         <div>
-                          <p className="font-medium text-white">Dealership</p>
-                          <p className="text-gray-300">Automotive Professional</p>
+                          <p className="font-medium text-white">Fitness Studio</p>
+                          <p className="text-gray-300">Professional Fitness Coach</p>
                         </div>
                       </div>
                     </div>
@@ -785,19 +734,25 @@ export default function SnacksAndFactsLanding() {
                     <h3 className="text-xl font-bold text-black mb-4">Follow the Journey</h3>
                     <div className="flex gap-4 mb-4">
                       <Link
-                        href="#"
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-300 shadow-lg hover:scale-110 group"
                       >
                         <Instagram className="h-6 w-6 text-white" />
                       </Link>
                       <Link
-                        href="#"
+                        href="https://twitter.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-300 shadow-lg hover:scale-110 group"
                       >
                         <Twitter className="h-6 w-6 text-white" />
                       </Link>
                       <Link
-                        href="#"
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-12 h-12 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-300 shadow-lg hover:scale-110 group"
                       >
                         <Facebook className="h-6 w-6 text-white" />
@@ -814,7 +769,7 @@ export default function SnacksAndFactsLanding() {
                       </Link>
                     </div>
                     <p className="text-sm text-gray-600">
-                      Follow for daily insights, automotive tips, and powerful content!
+                      Follow for daily fitness tips, transformation stories, and motivational content!
                     </p>
                   </CardContent>
                 </Card>
@@ -831,13 +786,10 @@ export default function SnacksAndFactsLanding() {
               <Hammer className="h-24 w-24" />
             </div>
             <div className="absolute bottom-10 right-20 text-white/5">
-              <Car className="h-32 w-32" />
+              <Dumbbell className="h-32 w-32" />
             </div>
             <div className="absolute top-1/2 left-1/4 text-white/5">
               <Zap className="h-28 w-28" />
-            </div>
-            <div className="absolute bottom-1/3 right-1/4 text-white/5">
-              <Settings className="h-20 w-20" />
             </div>
           </div>
 
@@ -846,12 +798,12 @@ export default function SnacksAndFactsLanding() {
               <div className="space-y-2">
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Hammer className="h-8 w-8 text-white" />
-                  <Car className="h-8 w-8 text-white" />
+                  <Dumbbell className="h-8 w-8 text-white" />
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">Stay Connected</h2>
                   <Zap className="h-8 w-8 text-white" />
                 </div>
                 <p className="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Get the latest content, automotive insights, and powerful facts delivered to your inbox.
+                  Get the latest fitness tips, workout routines, and transformation stories delivered to your inbox.
                 </p>
               </div>
               <NewsletterForm />
@@ -864,24 +816,24 @@ export default function SnacksAndFactsLanding() {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800 bg-black">
         <div className="flex items-center gap-2">
           <Hammer className="h-4 w-4 text-gray-400" />
-          <Car className="h-4 w-4 text-gray-400" />
-          <p className="text-xs text-gray-400">© 2024 Snacks & Facts. All rights reserved.</p>
+          <Dumbbell className="h-4 w-4 text-gray-400" />
+          <p className="text-xs text-gray-400">© 2024 Hammer Fit. All rights reserved.</p>
         </div>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link
-            href="#"
+            href="/privacy"
             className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-white transition-colors"
           >
             Privacy Policy
           </Link>
           <Link
-            href="#"
+            href="/terms"
             className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-white transition-colors"
           >
             Terms of Service
           </Link>
           <Link
-            href="#"
+            href="#contact"
             className="text-xs hover:underline underline-offset-4 text-gray-400 hover:text-white transition-colors"
           >
             Contact
