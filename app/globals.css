@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Hammer Animations */
+@keyframes hammer-strike {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  25% {
+    transform: rotate(-15deg) translateY(-5px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-10px);
+  }
+  75% {
+    transform: rotate(15deg) translateY(-5px);
+  }
+}
+
+@keyframes hammer-tap {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+@keyframes hammer-swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes hammer-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+@keyframes hammer-float-reverse {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-10deg);
+  }
+}
+
+/* Automotive Animations */
+@keyframes car-drive {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+}
+
+@keyframes car-reverse {
+  0% {
+    transform: translateX(100px) rotate(0deg) scaleX(-1);
+  }
+  50% {
+    transform: translateX(-50px) rotate(-5deg) scaleX(-1);
+  }
+  100% {
+    transform: translateX(100px) rotate(0deg) scaleX(-1);
+  }
+}
+
+@keyframes car-cruise {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(20px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(0px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(-20px) translateY(-10px);
+  }
+}
+
+@keyframes car-idle {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+@keyframes gear-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wrench-turn {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+/* Power/Muscle Animations */
+@keyframes power-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes muscle-flex {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+}
+
+/* General Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Animation Classes */
+.animate-hammer-strike {
+  animation: hammer-strike 2s ease-in-out infinite;
+}
+
+.animate-hammer-tap {
+  animation: hammer-tap 1.5s ease-in-out infinite;
+}
+
+.animate-hammer-swing {
+  animation: hammer-swing 3s ease-in-out infinite;
+}
+
+.animate-hammer-float {
+  animation: hammer-float 4s ease-in-out infinite;
+}
+
+.animate-hammer-float-reverse {
+  animation: hammer-float-reverse 4s ease-in-out infinite reverse;
+}
+
+.animate-car-drive {
+  animation: car-drive 6s ease-in-out infinite;
+}
+
+.animate-car-reverse {
+  animation: car-reverse 5s ease-in-out infinite;
+}
+
+.animate-car-cruise {
+  animation: car-cruise 4s ease-in-out infinite;
+}
+
+.animate-car-idle {
+  animation: car-idle 2s ease-in-out infinite;
+}
+
+.animate-gear-spin {
+  animation: gear-spin 4s linear infinite;
+}
+
+.animate-wrench-turn {
+  animation: wrench-turn 3s ease-in-out infinite;
+}
+
+.animate-power-pulse {
+  animation: power-pulse 2s ease-in-out infinite;
+}
+
+.animate-muscle-flex {
+  animation: muscle-flex 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 6s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
