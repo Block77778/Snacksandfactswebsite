@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Snacks & Facts - Hammer's World",
+  title: "Hammer Fit - Transform Your Body & Mind",
   description:
-    "Automotive expertise meets powerful content. Join Hammer for authentic conversations, interesting facts, and fitness transformation.",
+    "Join Hammer's fitness transformation program for personalized workout routines, meal plans, and coaching to achieve your fitness goals.",
   generator: "v0.dev",
 }
 
