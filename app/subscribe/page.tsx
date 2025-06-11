@@ -69,26 +69,26 @@ export default function SubscribePage() {
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Snacks%20and%20facts%20logo-TNPSF5djY9qkumP2uzk8YFhG1aMa0G.png"
             width="40"
             height="40"
-            alt="Snacks & Facts Logo - Muscular arms holding hammer"
+            alt="Hammer Fit Logo - Muscular arms holding hammer"
             className="rounded-lg"
           />
-          <span className="text-2xl font-bold text-white">Snacks & Facts</span>
+          <span className="text-2xl font-bold text-white">Hammer Fit</span>
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link href="/#about" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             About
           </Link>
-          <Link href="/#automotive" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Automotive
+          <Link href="/#programs" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Programs
           </Link>
           <Link
-            href="/#healthy-living"
+            href="/#transformation"
             className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
           >
-            Healthy Living
+            Transformation
           </Link>
           <Link href="/#hammer-fit" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Hammer Fit
+            Membership
           </Link>
           <Link href="/#contact" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             Contact
