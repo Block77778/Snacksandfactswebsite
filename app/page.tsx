@@ -461,18 +461,6 @@ export default function HammerFitLanding() {
                 },
               ]}
             />
-            <div className="text-center mt-12">
-              <Link href="/subscribe">
-                <Button size="lg" className="bg-black text-white hover:bg-gray-800 shadow-lg group text-lg px-8 py-4">
-                  <div className="flex items-center gap-2">
-                    <Hammer className="h-5 w-5" />
-                    <Dumbbell className="h-5 w-5" />
-                  </div>
-                  <span className="ml-2">Join Hammer Fit Program</span>
-                </Button>
-              </Link>
-              <p className="text-gray-600 text-sm mt-4">Ready to start your transformation?</p>
-            </div>
           </div>
         </section>
 
@@ -602,7 +590,10 @@ export default function HammerFitLanding() {
                     Message from The Hammer
                   </h3>
                   <audio controls className="w-full" preload="metadata">
-                    <source src="/audio/Hammer.mp3" type="audio/mpeg" />
+                    <source
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fe3ebca5-0338-4cd2-bb62-b4e4fc843215-E7ukEnWaHTqQ78PT0ziNXhNQanNble.mp3"
+                      type="audio/mpeg"
+                    />
                     Your browser does not support the audio element.
                   </audio>
                   <p className="text-gray-300 text-sm mt-3">
