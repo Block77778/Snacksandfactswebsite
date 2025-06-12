@@ -3,11 +3,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Hammer, Star, Trophy } from "lucide-react"
+import { Hammer, Star, Trophy, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function HammerClientsPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="flex flex-col min-h-screen bg-black">
       {/* Header */}
@@ -22,6 +25,8 @@ export default function HammerClientsPage() {
           />
           <span className="text-2xl font-bold text-white">Hammer Fit</span>
         </Link>
+
+        {/* Desktop Navigation */}
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link href="/hammers-life" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             Hammer's Life, Hammer's Wife!
@@ -41,6 +46,49 @@ export default function HammerClientsPage() {
             YouTube
           </Link>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button className="ml-auto md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden">
+            <nav className="flex flex-col p-4 space-y-4">
+              <Link
+                href="/hammers-life"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer's Life, Hammer's Wife!
+              </Link>
+              <Link
+                href="/hammer-clients"
+                className="text-sm font-medium text-white"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer Clients
+              </Link>
+              <Link
+                href="/hammer-gallery"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer Gallery
+              </Link>
+              <Link
+                href="https://youtube.com/@hammer-snf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                YouTube
+              </Link>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
@@ -162,6 +210,83 @@ export default function HammerClientsPage() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Client Success Story 4 */}
+              <Card className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <span className="text-2xl font-bold text-white">AL</span>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-black">Amanda L.</h3>
+                    <p className="text-gray-600 text-sm">Lost 30 lbs, gained confidence</p>
+                  </div>
+                  <div className="flex justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-center italic">
+                    "The personal coaching calls were game-changers. Hammer's motivation kept me on track even when I
+                    wanted to quit!"
+                  </p>
+                  <div className="flex flex-wrap gap-1 justify-center">
+                    <Badge className="bg-pink-100 text-pink-800">Confidence</Badge>
+                    <Badge className="bg-yellow-100 text-yellow-800">Motivation</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Client Success Story 5 */}
+              <Card className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center mx-auto">
+                    <span className="text-2xl font-bold text-white">RC</span>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-black">Robert C.</h3>
+                    <p className="text-gray-600 text-sm">Improved health markers</p>
+                  </div>
+                  <div className="flex justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-center italic">
+                    "The meal plans are delicious and easy to follow. My doctor was amazed at my improved blood work!"
+                  </p>
+                  <div className="flex flex-wrap gap-1 justify-center">
+                    <Badge className="bg-red-100 text-red-800">Health</Badge>
+                    <Badge className="bg-orange-100 text-orange-800">Nutrition</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Client Success Story 6 */}
+              <Card className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto">
+                    <span className="text-2xl font-bold text-white">SK</span>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-black">Sarah K.</h3>
+                    <p className="text-gray-600 text-sm">Marathon finisher</p>
+                  </div>
+                  <div className="flex justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-center italic">
+                    "From couch to marathon! Hammer's training program gave me the endurance and mental strength to
+                    achieve my dreams."
+                  </p>
+                  <div className="flex flex-wrap gap-1 justify-center">
+                    <Badge className="bg-blue-100 text-blue-800">Endurance</Badge>
+                    <Badge className="bg-green-100 text-green-800">Achievement</Badge>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -181,16 +306,16 @@ export default function HammerClientsPage() {
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">AL</span>
+                      <span className="text-white font-bold">TM</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-black">Amanda L.</h4>
-                      <p className="text-gray-600 text-sm">6-month program graduate</p>
+                      <h4 className="font-bold text-black">Tom M.</h4>
+                      <p className="text-gray-600 text-sm">12-month transformation</p>
                     </div>
                   </div>
                   <p className="text-gray-600 italic">
-                    "The personal coaching calls were game-changers. Hammer's motivation and accountability kept me on
-                    track even when I wanted to quit. Best investment I've ever made in myself!"
+                    "Hammer doesn't just train your body, he transforms your mindset. The mental toughness I've gained
+                    has helped me in every area of my life."
                   </p>
                 </CardContent>
               </Card>
@@ -199,16 +324,16 @@ export default function HammerClientsPage() {
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">RC</span>
+                      <span className="text-white font-bold">LB</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-black">Robert C.</h4>
-                      <p className="text-gray-600 text-sm">Annual subscription member</p>
+                      <h4 className="font-bold text-black">Lisa B.</h4>
+                      <p className="text-gray-600 text-sm">Lifetime member</p>
                     </div>
                   </div>
                   <p className="text-gray-600 italic">
-                    "The meal plans are actually delicious and easy to follow. I never felt like I was on a 'diet' -
-                    just eating better. The results speak for themselves!"
+                    "The community Hammer has built is incredible. We support each other through every challenge and
+                    celebrate every victory together."
                   </p>
                 </CardContent>
               </Card>
@@ -228,11 +353,8 @@ export default function HammerClientsPage() {
               </p>
               <Link href="/subscribe">
                 <Button size="lg" className="bg-white text-black hover:bg-gray-100 shadow-lg font-semibold">
-                  <div className="flex items-center gap-2">
-                    <Hammer className="h-5 w-5" />
-                    <Trophy className="h-5 w-5" />
-                  </div>
-                  <span className="ml-2">Start Your Transformation</span>
+                  <Hammer className="h-5 w-5 mr-2" />
+                  Start Your Transformation
                 </Button>
               </Link>
             </div>
