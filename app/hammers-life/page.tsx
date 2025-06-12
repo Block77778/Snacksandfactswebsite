@@ -1,4 +1,4 @@
-"use client"
+="use client"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -180,7 +180,7 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Hammer and his wife on their wedding day in beautiful formal attire"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -195,7 +195,7 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Beautiful black and white wedding photo of Hammer and his wife sharing a romantic kiss"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -206,11 +206,71 @@ export default function HammersLifePage() {
 
               <div className="relative group">
                 <Image
+                  src="/images/family-three-outdoor.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Family photo with Hammer, his wife, and their son outdoors"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Family Time</h3>
+                  <p className="text-sm text-gray-200">Together we're stronger</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
+                  src="/images/hammer-son-restaurant.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Hammer and his son enjoying a meal together at a restaurant"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Father & Son</h3>
+                  <p className="text-sm text-gray-200">Quality time together</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
+                  src="/images/family-son-portrait.jpeg"
+                  width="400"
+                  height="300"
+                  alt="School portrait of Hammer's son in a plaid shirt, smiling brightly"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Our Pride & Joy</h3>
+                  <p className="text-sm text-gray-200">The future is bright</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
+                  src="/images/hammer-hulk-kids.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Hammer dressed as the Hulk with children in superhero costumes during Halloween"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Family Fun</h3>
+                  <p className="text-sm text-gray-200">Being a superhero dad</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
                   src="/images/hammer-wife-bathtub.jpeg"
                   width="400"
                   height="300"
                   alt="Hammer and his wife relaxing together in a vintage bathtub by the lake"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -225,7 +285,7 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Beach selfie of Hammer and his wife enjoying vacation time together"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -240,72 +300,12 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Hammer and his wife in casual attire with sunglasses, looking relaxed and happy"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="font-bold text-lg">Casual Days</h3>
                   <p className="text-sm text-gray-200">Everyday happiness together</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/intimate-couple-selfie.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Intimate close-up selfie of Hammer and his wife showing their loving relationship"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Quiet Moments</h3>
-                  <p className="text-sm text-gray-200">Love in the little things</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/hammer-wife-gym.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Hammer and his wife together at the gym, both in workout attire"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Gym Partners</h3>
-                  <p className="text-sm text-gray-200">Training together, growing together</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/home-relaxing-couple.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Hammer relaxing at home with his wife, showing their comfortable domestic life"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Home Sweet Home</h3>
-                  <p className="text-sm text-gray-200">Comfort and love at home</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/hammer-with-dog.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Hammer with a small dog in his car, showing his gentle and caring side"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Furry Family</h3>
-                  <p className="text-sm text-gray-200">Love extends to all creatures</p>
                 </div>
               </div>
             </div>
@@ -325,16 +325,16 @@ export default function HammersLifePage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="relative group">
                 <Image
-                  src="/images/family-three-outdoor.jpeg"
+                  src="/images/hammer-with-dog.jpeg"
                   width="400"
                   height="300"
-                  alt="Family photo with Hammer, his wife, and their son outdoors"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  alt="Hammer with a small dog in his car, showing his gentle and caring side"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Family Time</h3>
-                  <p className="text-sm text-gray-200">Together we're stronger</p>
+                  <h3 className="font-bold text-lg">Furry Family</h3>
+                  <p className="text-sm text-gray-200">Love extends to all creatures</p>
                 </div>
               </div>
 
@@ -344,7 +344,7 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Hammer with an elderly woman in a home setting with beautiful flowers"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -359,7 +359,7 @@ export default function HammersLifePage() {
                   width="400"
                   height="300"
                   alt="Hammer with family members in front of a Welcome Home neon sign"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -370,46 +370,46 @@ export default function HammersLifePage() {
 
               <div className="relative group">
                 <Image
-                  src="/images/hammer-hulk-kids.jpeg"
+                  src="/images/intimate-couple-selfie.jpeg"
                   width="400"
                   height="300"
-                  alt="Hammer dressed as the Hulk with children in superhero costumes during Halloween"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  alt="Intimate close-up selfie of Hammer and his wife showing their loving relationship"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Family Fun</h3>
-                  <p className="text-sm text-gray-200">Being a superhero dad</p>
+                  <h3 className="font-bold text-lg">Quiet Moments</h3>
+                  <p className="text-sm text-gray-200">Love in the little things</p>
                 </div>
               </div>
 
               <div className="relative group">
                 <Image
-                  src="/images/hammer-son-restaurant.jpeg"
+                  src="/images/hammer-wife-gym.jpeg"
                   width="400"
                   height="300"
-                  alt="Hammer and his son enjoying a meal together at a restaurant"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  alt="Hammer and his wife together at the gym, both in workout attire"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Father & Son</h3>
-                  <p className="text-sm text-gray-200">Quality time together</p>
+                  <h3 className="font-bold text-lg">Gym Partners</h3>
+                  <p className="text-sm text-gray-200">Training together, growing together</p>
                 </div>
               </div>
 
               <div className="relative group">
                 <Image
-                  src="/images/family-son-portrait.jpeg"
+                  src="/images/home-relaxing-couple.jpeg"
                   width="400"
                   height="300"
-                  alt="School portrait of Hammer's son in a plaid shirt, smiling brightly"
-                  className="aspect-[4/3] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                  alt="Hammer relaxing at home with his wife, showing their comfortable domestic life"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Our Pride & Joy</h3>
-                  <p className="text-sm text-gray-200">The future is bright</p>
+                  <h3 className="font-bold text-lg">Home Sweet Home</h3>
+                  <p className="text-sm text-gray-200">Comfort and love at home</p>
                 </div>
               </div>
             </div>
