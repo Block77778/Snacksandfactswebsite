@@ -153,23 +153,6 @@ export function TransformationSlider({ title, description, images, className = "
             <div className="text-sm text-gray-600">Unedited Photos</div>
           </Card>
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Start Your Own Transformation?</h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            This transformation didn't happen overnight. It took dedication, the right nutrition plan, and consistent
-            training. If you're ready to commit to the process, I'm ready to guide you every step of the way.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-black text-white hover:bg-gray-800">
-              Join Hammer Fit Program
-            </Button>
-            <Button size="lg" variant="outline">
-              Learn About My Methods
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   )
