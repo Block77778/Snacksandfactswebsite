@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, Instagram, Twitter, Facebook, Hammer, Zap, Lightbulb } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { PhotoGallery } from "@/components/photo-gallery"
 import { Dumbbell, Heart } from "lucide-react"
 import { TransformationSlider } from "@/components/transformation-slider"
 import { ContactForm } from "@/components/contact-form"
@@ -59,23 +58,22 @@ export default function HammerFitLanding() {
           <span className="text-2xl font-bold text-white">Hammer Fit</span>
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
-          <Link href="#about" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            About
+          <Link href="/hammers-life" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Hammer's Life, Hammer's Wife!
           </Link>
-          <Link href="#programs" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Programs
+          <Link href="/hammer-clients" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Hammer Clients
           </Link>
-          <Link href="#transformation" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Transformation
+          <Link href="/hammer-gallery" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            Hammer Gallery
           </Link>
-          <Link href="#hammer-fit" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Membership
-          </Link>
-          <Link href="/subscribe" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Subscribe
-          </Link>
-          <Link href="#contact" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
-            Contact
+          <Link
+            href="https://youtube.com/@hammer-snf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+          >
+            YouTube
           </Link>
         </nav>
         <div className="md:hidden ml-auto">
@@ -100,46 +98,34 @@ export default function HammerFitLanding() {
         <div className="md:hidden bg-black/95 backdrop-blur-sm border-b border-gray-800 fixed top-16 left-0 right-0 z-40 shadow-lg">
           <nav className="flex flex-col gap-4 p-4">
             <Link
-              href="#about"
+              href="/hammers-life"
               className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              Hammer's Life, Hammer's Wife!
             </Link>
             <Link
-              href="#programs"
+              href="/hammer-clients"
               className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Programs
+              Hammer Clients
             </Link>
             <Link
-              href="#transformation"
+              href="/hammer-gallery"
               className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Transformation
+              Hammer Gallery
             </Link>
             <Link
-              href="#hammer-fit"
+              href="https://youtube.com/@hammer-snf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Membership
-            </Link>
-            <Link
-              href="/subscribe"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Subscribe
-            </Link>
-            <Link
-              href="#contact"
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
+              YouTube
             </Link>
           </nav>
         </div>
@@ -487,64 +473,6 @@ export default function HammerFitLanding() {
               </Link>
               <p className="text-gray-600 text-sm mt-4">Ready to start your transformation?</p>
             </div>
-          </div>
-        </section>
-
-        {/* Fitness Gallery */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <Dumbbell className="h-8 w-8 text-black" />
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl text-black">
-                    Fitness Gallery
-                  </h2>
-                  <Dumbbell className="h-8 w-8 text-black" />
-                </div>
-                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Moments captured during workouts, transformations, and fitness achievements
-                </p>
-              </div>
-            </div>
-
-            <PhotoGallery
-              title="Fitness Moments"
-              description="Celebrating progress, dedication, and results"
-              images={[
-                {
-                  src: "/images/hammer-gym-1.jpeg",
-                  alt: "Hammer showcasing his incredible physique in gray shorts next to gym equipment, displaying visible abs and muscle definition",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/hammer-gym-2.jpeg",
-                  alt: "Hammer giving a thumbs up while seated on gym equipment, showing his muscular build and positive attitude",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/hammer-gym-3.jpeg",
-                  alt: "Hammer in beige pants and sunglasses giving a thumbs up next to tanning equipment with blue LED lighting",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "/images/hammer-gym-4.jpeg",
-                  alt: "Hammer in bright green shorts giving a thumbs up next to gym equipment, showing his impressive transformation results",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20boat%20transformation-m1DpqyF3XKxdZqMf7HHvlnxd0jgv6t.jpeg",
-                  alt: "Hammer showcasing his peak physique on a boat in red shorts and sunglasses",
-                  aspectRatio: "video",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%206-lU6I0sMWslswaGujdnMH6rBdP6iEzF.jpeg",
-                  alt: "Hammer's final transformation result showing incredible muscle definition and visible abs",
-                  aspectRatio: "video",
-                },
-              ]}
-              className="max-w-6xl mx-auto"
-            />
           </div>
         </section>
 
