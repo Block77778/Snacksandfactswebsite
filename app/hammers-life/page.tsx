@@ -206,36 +206,6 @@ export default function HammersLifePage() {
 
               <div className="relative group">
                 <Image
-                  src="/images/family-three-outdoor.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Family photo with Hammer, his wife, and their son outdoors"
-                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Family Time</h3>
-                  <p className="text-sm text-gray-200">Together we're stronger</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/hammer-son-restaurant.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Hammer and his son enjoying a meal together at a restaurant"
-                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Father & Son</h3>
-                  <p className="text-sm text-gray-200">Quality time together</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
                   src="/images/family-son-portrait.jpeg"
                   width="400"
                   height="300"
@@ -246,21 +216,6 @@ export default function HammersLifePage() {
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="font-bold text-lg">Our Pride & Joy</h3>
                   <p className="text-sm text-gray-200">The future is bright</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/images/hammer-hulk-kids.jpeg"
-                  width="400"
-                  height="300"
-                  alt="Hammer dressed as the Hulk with children in superhero costumes during Halloween"
-                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-700 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 rounded-xl group-hover:bg-black/10 transition-colors duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-bold text-lg">Family Fun</h3>
-                  <p className="text-sm text-gray-200">Being a superhero dad</p>
                 </div>
               </div>
 
@@ -340,6 +295,21 @@ export default function HammersLifePage() {
 
               <div className="relative group">
                 <Image
+                  src="/images/hammer-hulk-kids.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Hammer dressed as the Hulk with children in superhero costumes during Halloween"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Community Fun</h3>
+                  <p className="text-sm text-gray-200">Being a superhero for the kids</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
                   src="/images/hammer-with-elderly-woman.jpeg"
                   width="400"
                   height="300"
@@ -410,6 +380,36 @@ export default function HammersLifePage() {
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="font-bold text-lg">Home Sweet Home</h3>
                   <p className="text-sm text-gray-200">Comfort and love at home</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
+                  src="/images/hammer-son-restaurant.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Hammer with a young friend enjoying a meal together at a restaurant"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Mentoring Youth</h3>
+                  <p className="text-sm text-gray-200">Sharing meals and wisdom</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <Image
+                  src="/images/family-three-outdoor.jpeg"
+                  width="400"
+                  height="300"
+                  alt="Hammer and his wife with a young friend outdoors"
+                  className="aspect-[4/5] overflow-hidden rounded-xl object-cover shadow-xl border border-gray-200 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/10 rounded-xl group-hover:bg-black/5 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-bold text-lg">Extended Family</h3>
+                  <p className="text-sm text-gray-200">Building lasting relationships</p>
                 </div>
               </div>
             </div>
