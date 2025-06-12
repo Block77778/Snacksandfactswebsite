@@ -1,12 +1,16 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Hammer, Camera, ImageIcon } from "lucide-react"
+import { Hammer, Camera, ImageIcon, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { PhotoGallery } from "@/components/photo-gallery"
+import { useState } from "react"
+import { TransformationSlider } from "@/components/transformation-slider"
 
 export default function HammerGalleryPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="flex flex-col min-h-screen bg-black">
       {/* Header */}
@@ -21,6 +25,8 @@ export default function HammerGalleryPage() {
           />
           <span className="text-2xl font-bold text-white">Hammer Fit</span>
         </Link>
+
+        {/* Desktop Navigation */}
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link href="/hammers-life" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
             Hammer's Life, Hammer's Wife!
@@ -40,6 +46,49 @@ export default function HammerGalleryPage() {
             YouTube
           </Link>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button className="ml-auto md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden">
+            <nav className="flex flex-col p-4 space-y-4">
+              <Link
+                href="/hammers-life"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer's Life, Hammer's Wife!
+              </Link>
+              <Link
+                href="/hammer-clients"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer Clients
+              </Link>
+              <Link
+                href="/hammer-gallery"
+                className="text-sm font-medium text-white"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Hammer Gallery
+              </Link>
+              <Link
+                href="https://youtube.com/@hammer-snf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                YouTube
+              </Link>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
@@ -69,6 +118,60 @@ export default function HammerGalleryPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Transformation Slider Section - Reduced gap */}
+        <section className="w-full py-8 md:py-16 lg:py-20 bg-black">
+          <div className="container px-4 md:px-6">
+            <TransformationSlider
+              title="Hammer's Complete Transformation"
+              description="Witness the incredible journey from start to finish - slide through each stage of this amazing transformation."
+              images={[
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%20start-UUTse4Ftx0JvyG3hTbPucPj1QeLv2e.jpeg",
+                  alt: "Hammer's transformation starting point - mirror selfie in green shorts showing the beginning of his fitness journey",
+                  stage: "Starting Point",
+                  description:
+                    "The beginning of an incredible transformation journey. Every great change starts with a single decision.",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%201-G1wyE1G5mpRy3vuzFr5cHQegfeIOyZ.jpeg",
+                  alt: "Hammer's early transformation progress in patterned shorts",
+                  stage: "Month 1-2",
+                  description: "Early progress showing dedication and consistency. The foundation is being built.",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%202-hvITzzZRIlLx2GNpLrAZsxzICp1nMY.jpeg",
+                  alt: "Hammer's continued transformation progress showing improved muscle definition",
+                  stage: "Month 3-4",
+                  description:
+                    "Noticeable changes in muscle definition and overall physique. The hard work is paying off.",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%203-OkqC1cafBTciGsd4ywoEBjzt1vOoPn.jpeg",
+                  alt: "Hammer's mid-transformation progress in green shorts showing significant changes",
+                  stage: "Month 5-6",
+                  description:
+                    "Significant improvements in muscle mass and body composition. The transformation is accelerating.",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%204-WRlqKvCRfq7N00AQlS71nsMpyyiQwe.jpeg",
+                  alt: "Hammer's advanced transformation progress in gray sweatpants showing excellent muscle definition",
+                  stage: "Month 7-8",
+                  description:
+                    "Advanced stage showing excellent muscle definition and strength gains. The results speak for themselves.",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%206-lU6I0sMWslswaGujdnMH6rBdP6iEzF.jpeg",
+                  alt: "Hammer's incredible final transformation result showing peak physique with visible abs and cross necklace",
+                  stage: "Final Result",
+                  description:
+                    "The incredible final result - peak physique achieved through dedication, proper nutrition, and consistent training.",
+                },
+              ]}
+              className="text-white"
+            />
           </div>
         </section>
 
@@ -114,49 +217,7 @@ export default function HammerGalleryPage() {
           </div>
         </section>
 
-        {/* Transformation Gallery Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
-            <PhotoGallery
-              title="Transformation Journey"
-              description="The complete transformation story - from start to incredible finish"
-              images={[
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%20start-UUTse4Ftx0JvyG3hTbPucPj1QeLv2e.jpeg",
-                  alt: "Hammer's transformation starting point - mirror selfie in green shorts showing the beginning of his fitness journey",
-                  aspectRatio: "portrait",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%201-G1wyE1G5mpRy3vuzFr5cHQegfeIOyZ.jpeg",
-                  alt: "Hammer's early transformation progress in patterned shorts",
-                  aspectRatio: "portrait",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%202-hvITzzZRIlLx2GNpLrAZsxzICp1nMY.jpeg",
-                  alt: "Hammer's continued transformation progress showing improved muscle definition",
-                  aspectRatio: "portrait",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%203-OkqC1cafBTciGsd4ywoEBjzt1vOoPn.jpeg",
-                  alt: "Hammer's mid-transformation progress in green shorts showing significant changes",
-                  aspectRatio: "portrait",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%204-WRlqKvCRfq7N00AQlS71nsMpyyiQwe.jpeg",
-                  alt: "Hammer's advanced transformation progress in gray sweatpants showing excellent muscle definition",
-                  aspectRatio: "portrait",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hammer%20transformation%206-lU6I0sMWslswaGujdnMH6rBdP6iEzF.jpeg",
-                  alt: "Hammer's incredible final transformation result showing peak physique with visible abs and cross necklace",
-                  aspectRatio: "portrait",
-                },
-              ]}
-            />
-          </div>
-        </section>
-
-        {/* Call to Action */}
+        {/* Call to Action - Fixed button */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -168,11 +229,8 @@ export default function HammerGalleryPage() {
               </p>
               <Link href="/subscribe">
                 <Button size="lg" className="bg-white text-black hover:bg-gray-100 shadow-lg font-semibold">
-                  <div className="flex items-center gap-2">
-                    <Hammer className="h-5 w-5" />
-                    <Camera className="h-5 w-5" />
-                  </div>
-                  <span className="ml-2">Start Your Journey</span>
+                  <Hammer className="h-5 w-5 mr-2" />
+                  Join Hammer Fit Program
                 </Button>
               </Link>
             </div>
